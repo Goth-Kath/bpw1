@@ -6,6 +6,7 @@ TagManager:
   tags:
   - textitem
   - bleh
+  - a
   layers:
   - Default
   - TransparentFX

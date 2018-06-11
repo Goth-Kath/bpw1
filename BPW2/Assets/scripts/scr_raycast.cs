@@ -6,12 +6,14 @@ public class scr_raycast : MonoBehaviour
 {
 
     public float rayDistance;
-    private Behaviour halolight;
+    [SerializeField]
+    public Behaviour halolight;
+    public GameObject canvas;
     
     // Use this for initialization
     void Start()
     {
-        Behaviour halolight = (Behaviour)GetComponent("Halo");
+        
     }
 
     // Update is called once per frame
@@ -20,15 +22,17 @@ public class scr_raycast : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, rayDistance))
         {
-            if (hit.transform.tag == "textitem")
+            halolight.enabled = false;
+
+            if (hit.transform.tag == "a")
             {
-               
-                halolight.enabled = true;
+                if (Input.GetMouseButtonDown(0))
+                {
+                    canvas.SetActive(true);
+                }
+                    halolight.enabled = true;
             }
-            if (hit.transform.tag == "bleh")
-            {
-                Destroy(hit.transform.gameObject);
-            }
+       
 
         }
     }
