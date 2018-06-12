@@ -7,6 +7,16 @@ TagManager:
   - textitem
   - bleh
   - a
+  - bedpainting
+  - dresserbook
+  - posters
+  - bedpillow1
+  - bedpillow2
+  - groundpillow
+  - groundbook
+  - standlamp1
+  - dresserknob
+  - haloplant
   layers:
   - Default
   - TransparentFX
