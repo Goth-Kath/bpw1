@@ -17,6 +17,9 @@ TagManager:
   - standlamp1
   - dresserknob
   - haloplant
+  - closetdoor1
+  - closetdoor2
+  - key
   layers:
   - Default
   - TransparentFX

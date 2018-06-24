@@ -21,6 +21,12 @@ public class scr_raycast : MonoBehaviour
     public Behaviour closetdoor2;
     public Behaviour bedpainting;
     public GameObject canvas;
+   
+    public GameObject closetclosed;
+    public GameObject closetopen;
+    private bool keybool;
+    public GameObject dresseropen;
+    public GameObject dresserclosed;
     
     // Use this for initialization
     void Start()
@@ -34,6 +40,7 @@ public class scr_raycast : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, rayDistance))
         {
+            hit.transform.SendMessage("HitByRay");
             haloplant.enabled = false;
             groundpillow.enabled = false;
             bedpillow1.enabled = false;
@@ -47,6 +54,7 @@ public class scr_raycast : MonoBehaviour
             closetdoor1.enabled = false;
             closetdoor2.enabled = false;
             bedpainting.enabled = false;
+
 
 
 
@@ -90,7 +98,10 @@ public class scr_raycast : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    canvas.SetActive(true);
+                    
+                    dresseropen.SetActive(true);
+                    dresserclosed.SetActive(false);
+                    keybool = true;
                 }
                 dresserknob.enabled = true;
             }
@@ -139,6 +150,11 @@ public class scr_raycast : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
+                    if(keybool == true)
+                    {
+                        closetclosed.SetActive(false);
+                        closetopen.SetActive(true);
+                    }
                     canvas.SetActive(true);
                 }
                 closetdoor1.enabled = true;
@@ -147,6 +163,11 @@ public class scr_raycast : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
+                    if (keybool == true)
+                    {
+                        Destroy(closetclosed);
+                        closetopen.SetActive(true);
+                    }
                     canvas.SetActive(true);
                 }
                 closetdoor2.enabled = true;
@@ -159,6 +180,7 @@ public class scr_raycast : MonoBehaviour
                 }
                 bedpainting.enabled = true;
             }
+           
         }
     }
 }

@@ -10,6 +10,7 @@ public class scrip_text : MonoBehaviour {
     private int nummer;
     public int endtext;
     public GameObject canvas;
+    private bool RayBool;
 
 
     // Use this for initialization
@@ -18,9 +19,25 @@ public class scrip_text : MonoBehaviour {
         text.text = actualtext[nummer];
     }
 
+    void HitByRay()
+    {
+
+        if (RayBool == false)
+        {
+            RayBool = true;
+        }
+        if (RayBool == true)
+        {
+
+            Debug.Log("I was hit by a ray");
+            RayBool = false;
+        }
+
+    }
+
     // Update is called once per frame
     void Update() {
-        if (Input.GetKeyDown("e"))
+        if (Input.GetKeyDown("e") && RayBool == true)
             {
             print(nummer);
 
