@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1941,19 +1941,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayDistance: 100
-  haloplant: {fileID: 543573637}
-  groundpillow: {fileID: 1046462221}
-  bedpillow1: {fileID: 928272686}
-  bedpillow2: {fileID: 979030250}
-  dresserknob: {fileID: 1442329445}
-  dresserbook: {fileID: 1050674539}
-  groundbook: {fileID: 1970557468}
-  standlamp1: {fileID: 1572475642}
-  standlamp2: {fileID: 1696830477}
-  posters: {fileID: 457784110}
-  closetdoor1: {fileID: 1561352914}
-  closetdoor2: {fileID: 1206925471}
-  bedpainting: {fileID: 875621740}
+  currentHalo: {fileID: 0}
+  currentText: {fileID: 0}
+  textComponent: {fileID: 962642163}
   canvas: {fileID: 1769144099}
   closetclosed: {fileID: 728946954}
   closetopen: {fileID: 781814775}
@@ -2513,13 +2503,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c2618a0cf9ede459ac42630b4f8ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 962642163}
   actualtext:
   - hallo
   - hey
   - hi
-  endtext: 3
-  canvas: {fileID: 1769144099}
 --- !u!1 &552983427
 GameObject:
   m_ObjectHideFlags: 0
@@ -5652,12 +5639,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c2618a0cf9ede459ac42630b4f8ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 389603015}
   actualtext:
   - koekjes
   - pinda
-  endtext: 2
-  canvas: {fileID: 1769144099}
 --- !u!1 &1058668371
 GameObject:
   m_ObjectHideFlags: 0
