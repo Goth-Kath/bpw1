@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Gebruiker/Documents/bpw1/BPW2/bpw2V1.exe
+C:/Users/Gebruiker/Documents/bpw1/BPW2/Stowaway.exe
 SceneListBegin?
 Assets/scenes/Main Menu.unity
 Assets/scenes/Homescene.unity
@@ -120,7 +120,9 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 205965134a5874db410d674ebdf33ba7 Assembly-CSharp.dll:.ExampleWheelController
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
+4ad755e1cfc339b1da89eeef8dc6cbcf Assembly-CSharp.dll:.scr_raycast2
 8ef782784bf4e876b85c8da0ece4d7da Assembly-CSharp.dll:.scr_camera
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.scr_menu
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -157,5 +159,3 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 f671a42aea5f34fec6a4450a3668c615 Assembly-CSharp.dll:UnityEngine.PostProcessing.PostProcessingProfile
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 ead5834d5ed486616f44a39997c7a8d6 Assembly-CSharp.dll:.scr_raycast
-4ad755e1cfc339b1da89eeef8dc6cbcf Assembly-CSharp.dll:.scr_raycast2
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.scr_menu
