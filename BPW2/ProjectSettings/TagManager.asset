@@ -4,8 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - textitem
-  - bleh
   - a
   - bedpainting
   - dresserbook
@@ -20,6 +18,14 @@ TagManager:
   - closetdoor1
   - closetdoor2
   - key
+  - drawer
+  - closet
+  - painting
+  - gold
+  - door
+  - hat
+  - stand
+  - lamp1
   layers:
   - Default
   - TransparentFX

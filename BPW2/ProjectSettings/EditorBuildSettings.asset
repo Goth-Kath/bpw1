@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/scenes/Main Menu.unity
+    guid: ac209527ce62e1f44b7ded687a12fdd4
+  - enabled: 1
+    path: Assets/scenes/Homescene.unity
+    guid: 0569b91bd4384274e9f3e7aa40c10d08
+  - enabled: 1
+    path: Assets/scenes/PirateShip.unity
+    guid: a04dfe36e2c4a2b4c9eec857890ffa7b

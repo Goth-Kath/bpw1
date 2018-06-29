@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class scr_raycast : MonoBehaviour
 {
 
@@ -16,7 +18,12 @@ public class scr_raycast : MonoBehaviour
     private bool keybool;
     public GameObject dresseropen;
     public GameObject dresserclosed;
-    
+    public GameObject keyimage;
+    public AudioSource musicsource;
+    public AudioClip pickupitem;
+    public AudioClip closetdoor;
+    public GameObject closetcanvas;
+
     // Use this for initialization
     void Start()
     {
@@ -26,9 +33,54 @@ public class scr_raycast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        closetcanvas.SetActive(false);
+
+        if (Input.GetKeyDown("escape"))
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
+        
+        
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, rayDistance))
         {
+            if (Input.GetMouseButtonDown(0) && hit.transform.tag == "drawer")
+            {
+                dresseropen.SetActive(true);
+                Destroy(dresserclosed);
+                keybool = true;
+                musicsource.PlayOneShot(pickupitem);
+
+            }
+            if (keybool == true){
+                keyimage.SetActive(true);
+            }
+            else{
+                keyimage.SetActive(false);
+            }
+            if (hit.transform.tag == "closet")
+            {
+                closetcanvas.SetActive(true);
+            }
+            if (Input.GetMouseButtonDown(0) && hit.transform.tag =="closet" && keybool == true)
+            {
+                closetopen.SetActive(true);
+                Destroy(closetclosed);
+                keybool = false;
+                musicsource.PlayOneShot(closetdoor);
+            }
+
+            if (Input.GetMouseButtonDown(0) && hit.transform.tag == "painting")
+            {
+                musicsource.PlayOneShot(closetdoor);
+                SceneManager.LoadScene("PirateShip");
+            }
+          
+       
+
+
+
+
             //Halo Behaviour
             if (currentHalo != null)
             {
@@ -91,5 +143,6 @@ public class scr_raycast : MonoBehaviour
             DontShowCanvasAndResetText();
         }
     }
+
 }
 
